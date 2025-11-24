@@ -71,7 +71,7 @@ const Navbar = () => {
               </span>
             </h1>
             <p className="text-xs sm:text-sm text-emerald-700 dark:text-emerald-300 font-medium mt-1 opacity-90">
-              {isArabic ? "علاج طبيعي أصلي 100%" : "100% Original Natural Care"}
+              {isArabic ? "منتجات طبيعيه أصليه 100%" : "100% Original Natural Care"}
             </p>
           </div>
         </Link>
