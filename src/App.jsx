@@ -2,10 +2,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 
-// الـ Layout الرئيسي (يحتوي على Navbar + Footer + Outlet)
 import MainLayout from "./layouts/MainLayout";
 
-// الصفحات
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Products from "./pages/Products";
@@ -14,10 +12,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 
-// الـ Context
 import { ThemeProvider } from "./contexts/ThemeContext";
-
-// مكوّن الرجوع التلقائي لأعلى الصفحة
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
@@ -25,11 +20,8 @@ function App() {
     <HelmetProvider>
       <ThemeProvider>
         <Router>
-          {/* ← هذا السطر الذهبي: يرجع الصفحة لأعلى تلقائيًا عند كل انتقال */}
           <ScrollToTop />
-
           <Routes>
-            {/* جميع الصفحات داخل Layout واحد (يحتوي على Navbar و Footer) */}
             <Route path="/" element={<MainLayout />}>
               <Route index element={<Home />} />
               <Route path="about" element={<About />} />
@@ -40,7 +32,7 @@ function App() {
               <Route path="contact" element={<Contact />} />
             </Route>
 
-            {/* صفحة 404 أنيقة جدًا */}
+            {/* 404 Page */}
             <Route
               path="*"
               element={
