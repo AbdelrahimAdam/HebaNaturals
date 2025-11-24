@@ -1,7 +1,7 @@
 // src/pages/Home.jsx
 import React from "react";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";  // الصحيح
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { FaLeaf, FaHeart, FaShoppingBag, FaComments, FaWhatsapp } from "react-icons/fa";
@@ -14,18 +14,22 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>هبة ناتشورالز | منتجات علاجية طبيعية بإشراف الدكتورة هبة مهاجر</title>
-        <meta name="description" content="منتجات علاجية طبيعية 100% للشعر الأفريقي والمجعد من أجود الأعشاب الأيورفيدية والسودانية بإشراف الدكتورة هبة مهاجر" />
-        <meta property="og:image" content="/img/products/alopecia-oil.jpg" />
+        <meta charSet="utf-8" />
+        <title>{'هبه ناتشورالز | منتجات علاجيه طبيعيه بإشراف د/ هبه مهاجر'}</title>
+        <meta
+          name="description"
+          content="منتجات علاجية طبيعيه 100% للشعر الأفريقي والمجعد من أجود الأعشاب الأيورفيديه والسودانيه."
+        />
+        <meta property="og:image" content="/img/products/hebaBrand.jpeg" />
       </Helmet>
 
       <main className="bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-100 dark:from-emerald-950 dark:via-teal-950 dark:to-cyan-900 min-h-screen">
 
-        {/* Hero Section */}
+        {/* HERO SECTION */}
         <section
           className="relative py-24 md:py-32 lg:py-40 overflow-hidden text-white"
           style={{
-            backgroundImage: `url('/img/products/alopecia-oil.jpg')`,
+            backgroundImage: `url('/img/products/hebaBrand.jpeg')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundAttachment: "fixed",
@@ -33,6 +37,7 @@ const Home = () => {
         >
           <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/95 via-black/80 to-teal-900/95" />
 
+          {/* Floating leaf animations */}
           <div className="absolute inset-0 opacity-40 pointer-events-none">
             {[...Array(12)].map((_, i) => (
               <motion.div
@@ -57,29 +62,34 @@ const Home = () => {
             ))}
           </div>
 
+          {/* HERO TEXT */}
           <div className="container mx-auto px-5 text-center relative z-10">
             <motion.h1
-              initial={{ y: -80, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1 }}
-              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-tight"
-            >
-              <span className="bg-gradient-to-r from-emerald-200 via-cyan-200 to-lime-200 bg-clip-text text-transparent drop-shadow-2xl arabic">
-                {isArabic ? "هبة" : "Heba"}
-              </span>
-              <span className="bg-gradient-to-r from-lime-200 via-teal-200 to-emerald-200 bg-clip-text text-transparent drop-shadow-2xl arabic ml-3">
-                {isArabic ? "ناتشورالز" : "Naturals"}
-              </span>
-            </motion.h1>
+  initial={{ y: -80, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  transition={{ duration: 1 }}
+  className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-tight"
+>
+  <span className="bg-gradient-to-r from-emerald-200 via-cyan-200 to-lime-200 bg-clip-text text-transparent drop-shadow-2xl arabic">
+    {isArabic ? "هبه\u200C" : "Heba"}
+  </span>
 
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-              className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium mt-6 text-white/90 drop-shadow-lg arabic leading-relaxed max-w-4xl mx-auto px-4"
-            >
-              منتجات علاجية طبيعية 100% بإشراف الدكتورة هبة مهاجر
-            </motion.p>
+  {" "}  {/* ← هذه هي المسافة الحقيقية التي تفصل الكلمتين */}
+
+  <span className="bg-gradient-to-r from-lime-200 via-teal-200 to-emerald-200 bg-clip-text text-transparent drop-shadow-2xl arabic ml-3">
+    {isArabic ? "ناتشورالز" : "Naturals"}
+  </span>
+</motion.h1>
+
+<motion.p
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.6 }}
+  className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium mt-6 text-white/90 drop-shadow-lg arabic max-w-4xl mx-auto px-4"
+>
+  منتجات علاجيه طبيعيه 100% بإشراف د/ هبه مهاجر
+</motion.p>
+
 
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
@@ -93,6 +103,7 @@ const Home = () => {
               >
                 {t("home.shop_now") || "تسوقي الآن"}
               </Link>
+
               <Link
                 to="/contact"
                 className="bg-transparent backdrop-blur-xl border-4 border-white/60 hover:bg-white/20 px-8 py-4 rounded-full text-lg sm:text-xl md:text-2xl font-bold hover:scale-105 transition-all duration-300 arabic"
@@ -102,15 +113,19 @@ const Home = () => {
             </motion.div>
           </div>
 
+          {/* Decorative wave */}
           <div className="absolute bottom-0 w-full">
             <svg viewBox="0 0 1440 150" className="w-full h-24 md:h-32">
-              <path fill="currentColor" className="text-emerald-100 dark:text-emerald-900"
-                d="M0,70 C320,140 1120,20 1440,90 L1440,150 L0,150 Z" />
+              <path
+                fill="currentColor"
+                className="text-emerald-100 dark:text-emerald-900"
+                d="M0,70 C320,140 1120,20 1440,90 L1440,150 L0,150 Z"
+              />
             </svg>
           </div>
         </section>
 
-        {/* Quick Navigation */}
+        {/* QUICK NAVIGATION */}
         <section className="py-20 bg-gradient-to-br from-teal-50/80 via-emerald-50/90 to-cyan-50/80 dark:from-teal-950/40 dark:via-emerald-950/50 dark:to-cyan-950/40">
           <div className="container mx-auto px-5">
             <motion.h2
@@ -118,15 +133,15 @@ const Home = () => {
               whileInView={{ opacity: 1, y: 0 }}
               className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-emerald-700 to-teal-700 dark:from-emerald-300 dark:to-teal-300 bg-clip-text text-transparent arabic"
             >
-              اكتشفي مجموعتنا العلاجية
+              اكتشفي مجموعتنا الفريده
             </motion.h2>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
               {[
-                { path: "/about",    label: "من نحن",       Icon: FaLeaf,       gradient: "from-emerald-500 to-teal-600" },
-                { path: "/products", label: "المنتجات",     Icon: FaHeart,      gradient: "from-rose-500 to-pink-600" },
-                { path: "/order",    label: "اطلبي الآن",   Icon: FaShoppingBag,gradient: "from-amber-500 to-orange-600" },
-                { path: "/contact",  label: "تواصلي معنا", Icon: FaComments,   gradient: "from-cyan-500 to-blue-600" },
+                { path: "/about", label: "من نحن", Icon: FaLeaf, gradient: "from-emerald-500 to-teal-600" },
+                { path: "/products", label: "المنتجات", Icon: FaHeart, gradient: "from-rose-500 to-pink-600" },
+                { path: "/order", label: "اطلبي الآن", Icon: FaShoppingBag, gradient: "from-amber-500 to-orange-600" },
+                { path: "/contact", label: "تواصلي ", Icon: FaComments, gradient: "from-cyan-500 to-blue-600" },
               ].map((item, i) => {
                 const Icon = item.Icon;
                 return (
@@ -151,9 +166,9 @@ const Home = () => {
 
         <TestimonialsCarousel />
 
-        {/* Floating WhatsApp */}
+        {/* WHATSAPP FLOATING BUTTON */}
         <a
-          href="https://wa.me/201234567890"
+          href="https://wa.me/+966566452949"
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-5 right-5 sm:bottom-7 sm:right-7 z-50 group"
