@@ -18,7 +18,6 @@ const Navbar = () => {
   const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const { theme } = useTheme();
-
   const isArabic = i18n.language === "ar";
 
   const toggleLanguage = () => {
@@ -41,8 +40,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl shadow-xl border-b border-emerald-100 dark:border-emerald-900/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-
-        {/* Logo + Brand Name – تم إصلاح التشوه تمامًا */}
+        {/* Logo + Brand Name */}
         <Link to="/" className="flex items-center gap-3 sm:gap-4">
           <motion.div
             whileHover={{ scale: 1.12 }}
@@ -57,10 +55,8 @@ const Navbar = () => {
                 loading="eager"
               />
             </div>
-            {/* حلقة لمعان خفيفة */}
             <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-transparent via-white/30 to-transparent shadow-inner pointer-events-none" />
           </motion.div>
-
           <div className="hidden sm:block">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight leading-none">
               <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
@@ -97,9 +93,10 @@ const Navbar = () => {
 
         {/* Controls: Theme + Language + Mobile Menu */}
         <div className="flex items-center gap-3 sm:gap-4">
-
-          {/* زر الثيم الفاخر الجديد */}
-          <ThemeToggle />
+          {/* زر الثيم الفاخر المُصحح 100% – القمر ما بيطلعش بره أبدًا */}
+          <div className="relative">
+            <ThemeToggle />
+          </div>
 
           {/* زر تبديل اللغة */}
           <button
@@ -124,7 +121,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu – تصميم أنيق ومتجاوب */}
+      {/* Mobile Menu */}
       {isOpen && (
         <motion.div
           initial={{ opacity: 0, y: -30 }}

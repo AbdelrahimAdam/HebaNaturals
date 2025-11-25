@@ -122,7 +122,7 @@ const Footer = () => {
           </p>
           <p className="text-emerald-300 text-sm sm:text-base">
             © {year} <span className="font-black text-emerald-100 text-lg">Heba Naturals</span> • كل الحقوق محفوظه
-            <br className="sm:hidden" /> • بإشراف  د/ هبه مهاجر
+            <br className="sm:hidden" /> • بإشراف  د/ مواهب مهاجر
           </p>
         </div>
       </div>

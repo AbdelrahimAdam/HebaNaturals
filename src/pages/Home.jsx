@@ -15,7 +15,7 @@ const Home = () => {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>هبه ناتشورالز | منتجات علاجيه طبيعيه بإشراف د/ هبه مهاجر</title>
+        <title>هبه ناتشورالز | منتجات علاجيه طبيعيه بإشراف د/ مواهب مهاجر</title>
         <meta
           name="description"
           content="منتجات علاجية طبيعيه 100% للشعر الأفريقي والمجعد من أجود الأعشاب الأيورفيديه والسودانيه."
@@ -82,7 +82,7 @@ const Home = () => {
               transition={{ delay: 0.6 }}
               className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium mt-6 text-white/95 drop-shadow-lg max-w-4xl mx-auto px-4"
             >
-              منتجات علاجيه طبيعيه 100% بإشراف د/ هبه مهاجر
+              منتجات علاجيه طبيعيه 100% بإشراف د/ مواهب مهاجر
             </motion.p>
 
             <motion.div

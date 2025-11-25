@@ -8,13 +8,13 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>من نحن | هبه ناتشورالز - منتجات علاجيه طبيعيه بإشراف د/ هبه مهاجر</title>
+        <title>من نحن | هبه ناتشورالز - منتجات علاجيه طبيعيه بإشراف د/ مواهب مهاجر</title>
         <meta
           name="description"
           content="هبة ناتشورالز – علامة تجارية رائده في المنتجات العلاجيه الطبيعيه 100% للشعر الأفريقي والمجعد، بتركيبات أيورفيديه أصليه من أجود الأعشاب."
         />
         <meta property="og:title" content="من نحن | هبه ناتشورالز" />
-        <meta property="og:description" content="تعرفي على قصة الدكتوره هبه مهاجر وكيف صنعت منتجات علاجيه طبيعيه غيرت حياة آلاف النساء" />
+        <meta property="og:description" content="تعرفي على قصة الدكتوره مواهب مهاجر وكيف صنعت منتجات علاجيه طبيعيه غيرت حياة آلاف النساء" />
         <meta property="og:image" content="https://hebanaturals.com/img/products/karkar.jpeg" />
         <meta property="og:url" content="https://hebanaturals.com/about" />
       </Helmet>
@@ -32,7 +32,7 @@ const About = () => {
             قصتنا مع الطبيعه  
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed font-medium px-4">
-              هبه ناتشورالز هي ثمرة شغف وعلم وإصرار د/ هبه مهاجر على إعادة الجمال الطبيعي لشعركِ بأنقى المكونات وأصدق التركيبات.
+              هبه ناتشورالز هي ثمرة شغف وعلم وإصرار د/ مواهب مهاجر على إعادة الجمال الطبيعي لشعركِ بأنقى المكونات وأصدق التركيبات.
             </p>
           </motion.div>
 
@@ -67,13 +67,13 @@ const About = () => {
             {/* النص */}
             <div className="p-8 md:p-12 text-center md:text-right">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-emerald-700 dark:text-emerald-400 mb-4">
-                د/ هبه مهاجر
+                د/ مواهب مهاجر
               </h2>
               <p className="text-lg sm:text-xl text-emerald-600 dark:text-emerald-400 font-semibold mb-6">
                 خبيره في التركيبات العلاجيه الطبيعيه والأيورفيدا
               </p>
               <p className="text-base sm:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-                بعد سنوات من البحث والتجربه، قررت الدكتوره هبه مهاجر أن تعيد للمرأة جمالها الطبيعي من خلال منتجات علاجيه نقيه 100%، مصممة خصيصًا للشعر الأفريقي والمجعد بكل تحدياته.
+                بعد سنوات من البحث والتجربه، قررت الدكتوره مواهب مهاجر أن تعيد للمرأة جمالها الطبيعي من خلال منتجات علاجيه نقيه 100%، مصممة خصيصًا للشعر الأفريقي والمجعد بكل تحدياته.
               </p>
               <p className="text-base sm:text-lg leading-relaxed text-gray-700 dark:text-gray-300 mt-5">
                 تركيباتنا تجمع بين أسرار الأيورفيدا الهنديه، والكركار السوداني الأصيل، والأعشاب الطبيعيه المختاره بعناية فائقه، لتقدم لكِ نتائج حقيقيه ومرئيه من الأسبوع الأول.
@@ -124,7 +124,7 @@ const About = () => {
               <a href="https://www.instagram.com/heba_naturals1" target="_blank" rel="noopener noreferrer" className="hover:scale-125 transition-transform duration-300">
                 <FaInstagram />
               </a>
-              <a href="https://www.facebook.com/share/16p8mXJWWK/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="hover:scale-125 transition-transform duration-300">
+              <a href="https://www.facebook.com/share/g/1H45nmYu99/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="hover:scale-125 transition-transform duration-300">
                 <FaFacebookF />
               </a>
               <a href="https://wa.me/+966566452949" target="_blank" rel="noopener noreferrer" className="hover:scale-125 transition-transform duration-300">

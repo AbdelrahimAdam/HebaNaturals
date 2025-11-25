@@ -82,11 +82,11 @@ const fullPosts = {
     image: "/img/products/karkar.jpeg",
     content: `
 <div class="text-center mb-12">
-  <img src="/img/products/karkar.jpeg" alt="الكركار السوداني الأصلي - جزء من تركيبات هبة ناتشورالز" class="w-full max-w-2xl mx-auto rounded-3xl shadow-2xl border-8 border-white dark:border-gray-800" />
-  <p class="text-sm text-gray-500 dark:text-gray-400 mt-4 italic">نمزج بين الأصاله السودانية والعلم الأيورفيدي لنقدم لكِ الأفضل</p>
+  <img src="/img/products/karkar.jpeg" alt="الكركار السوداني الأصلي - جزء من تركيبات هبه ناتشورالز" class="w-full max-w-2xl mx-auto rounded-3xl shadow-2xl border-8 border-white dark:border-gray-800" />
+  <p class="text-sm text-gray-500 dark:text-gray-400 mt-4 italic">نمزج بين الأصاله السودانيه والعلم الأيورفيدي لنقدم لكِ الأفضل</p>
 </div>
 
-<p class="text-lg leading-relaxed mb-6">كل يوم أسمع نفس السؤال: "يا دكتورة هبه… كيف أثق في منتج جديد بعد ما جربت العشرات بدون جدوى؟"</p>
+<p class="text-lg leading-relaxed mb-6">كل يوم أسمع نفس السؤال: "يا دكتورة مواهب… كيف أثق في منتج جديد بعد ما جربت العشرات بدون جدوى؟"</p>
 
 <p class="text-lg leading-relaxed mb-6">وإجابتي دائمًا واحده:</p>
 
@@ -119,9 +119,9 @@ const BlogPost = () => {
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950 dark:to-teal-950">
         <div className="text-center p-10">
           <h1 className="text-6xl font-black text-emerald-800 dark:text-emerald-400 mb-4">404</h1>
-          <p className="text-2xl text-gray-700 dark:text-gray-300 mb-8">الصفحة غير موجودة</p>
+          <p className="text-2xl text-gray-700 dark:text-gray-300 mb-8">الصفحة غير موجوده</p>
           <Link to="/blog" className="text-emerald-600 dark:text-emerald-400 font-bold text-xl hover:underline">
-            ← العودة للمدونة
+            العودة للمدونة
           </Link>
         </div>
       </div>
@@ -146,7 +146,7 @@ const BlogPost = () => {
             <div className="bg-gradient-to-r from-emerald-600 to-teal-600 p-10 text-white">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight">{post.title}</h1>
               <div className="flex flex-wrap items-center gap-6 mt-6 text-emerald-100">
-                <span className="flex items-center gap-2"><FaUser /> د. هبه مهاجر</span>
+                <span className="flex items-center gap-2"><FaUser /> د. مواهب مهاجر</span>
                 <span className="flex items-center gap-2"><FaCalendarAlt /> {new Date(post.date).toLocaleDateString("ar-EG", { day: "numeric", month: "long", year: "numeric" })}</span>
               </div>
             </div>
@@ -162,7 +162,7 @@ const BlogPost = () => {
                 مستعده تبدئي رحلتك مع النتايج الحقيقيه؟
               </h3>
               <a
-                href="https://wa.me/201234567890"
+                href="https://wa.me/966566452949"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-4 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold text-xl sm:text-2xl px-12 py-6 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"

@@ -11,7 +11,7 @@ const Products = () => {
     {
       id: 1,
       name: "ماسك الحنة الطبيعي",
-      description: "يغذّي الشعر، يقلّل التقطيف، ويزيد من كثافته.\nومعه يعمل على التطويل بشكل فعّال.\nلمسه طبيعيه لصحه وجمال شعرك.",
+      description: "يغذّي الشعر، يقلّل التقصف، ويزيد من كثافته.\nومعه يعمل على التطويل بشكل فعّال.\nلمسه طبيعيه لصحه وجمال شعرك.",
       image: "/img/products/henna.jpg",
     },
     {
@@ -27,27 +27,39 @@ const Products = () => {
       image: "/img/products/karkar.jpeg",
     },
     {
+      id: 4,
+      name: "سيروم الإنبات",
+      description: "تركيبة فعالة تحفز نمو الشعر من الجذور، وتقوي البصيلات وتعالج الفراغات.\nعلاج فعال للثعلبة والصلع الغير وراثي.\nآمن للأطفال والنساء والرجال.",
+      image: "/img/products/ceroom.jpeg",
+    },
+    {
       id: 5,
       name: "بخاخ Super Grow",
       description: "منقوع أعشاب فعال لتحفيز إنبات الشعر.\nيقوّي البصيلات ويقلّل التساقط.\nيحتوي على مواد ممتازة لترطيب\nبشكل ملحوظ مع الاستخدام المنتظم.",
       image: "/img/products/bakhakh.jpeg",
     },
     {
-      id: 7,
+      id: 6,
       name: "المعالج الملكي",
-      description: "تركيبة مغذّية تعالج التلف، تقوّي الشعرة\nمن الجذور حتى الأطراف، وتساهم بصورة فعّالة\nفي القضاء على التقصف والمشاكل المصاحبة للزبدة.\nوتضمن شعر ناعم ولامع بصورة ملكية.",
+      description: "تركيبة مغذية بعمق تعالج التلف، تقوي الشعرة من الجذور حتى الأطراف،\nتعالج الشيب المبكر، وتمنح شعرك نعومة ولمعة ملكية.",
+      image: "/img/products/king.jpeg",
+    },
+    {
+      id: 7,
+      name: "المعالج الاورفيدي \"الكينج\"",
+      description: "خلاصة الأعشاب الهندية الطبيعية، يعالج آثار الفرد والتلف الحراري ويمنحك شعر صحي ولامع من أول استعمال.",
       image: "/img/products/oil.jpeg",
     },
     {
       id: 8,
-      name: "مجموعة هبه ناتشورالز الكامله",
-      description: "كل المنتجات الطبيعيه في باقه واحده بإشراف د/ هبه مهاجر.\nنتائج حقيقيه، مكونات طبيعيه 100%، وثقة أكثر من 12,000 عميله.",
+      name: "مجموعة هبة ناتشورالز الكاملة",
+      description: "كل المنتجات الطبيعيه في باقه واحده بإشراف د/ هبة مهاجر.\nنتائج حقيقيه، مكونات طبيعيه 100%، وثقة أكثر من 12,000 عميلة.",
       image: "/img/products/hebaBrand.jpeg",
     },
   ];
 
   const handleWhatsAppClick = (productName) => {
-    const message = `مرحبًا دكتوره هبه ناتشورالز\nأريد الاستفسار عن:\n*${productName}*\nمن فضلك أرسلي السعر، طريقة الاستخدام، وكيفية الطلب.\nشكرًا جزيلًا`;
+    const message = `مرحبًا دكتوره هبة ناتشورالز\nأريد الاستفسار عن:\n*${productName}*\nمن فضلك أرسلي السعر، طريقة الاستخدام، وكيفية الطلب.\nشكرًا جزيلًا`;
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, "_blank");
   };
 
@@ -55,13 +67,12 @@ const Products = () => {
     <>
       <Helmet>
         <title>منتجات هبه ناتشورالز | علاجات طبيعيه للشعر الأفريقي والعربي</title>
-        <meta name="description" content="منتجات طبيعيه علاجيه للثعلبه، القشره، الفراغات، التساقط – بإشراف د/ هبه مهاجر – نتائج فوريه ومضمونه" />
+        <meta name="description" content="منتجات طبيعيه علاجيه للثعلبه، القشره، الفراغات، التساقط – بإشراف د/ مواهب مهاجر – نتائج فوريه ومضمونه" />
         <meta property="og:image" content="/img/products/hebaBrand.jpeg" />
       </Helmet>
 
       <main className="min-h-screen bg-gradient-to-b from-emerald-50/90 via-white to-teal-50/80 dark:from-emerald-950 dark:via-gray-900 dark:to-teal-950 py-16 px-4">
         <div className="container mx-auto max-w-7xl">
-
           {/* العنوان الرئيسي مع النص الجديد بخط كيرلي فاخر */}
           <motion.div
             initial={{ y: -80, opacity: 0 }}
@@ -70,9 +81,8 @@ const Products = () => {
             className="text-center mb-20"
           >
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-black bg-gradient-to-r from-emerald-700 via-teal-600 to-green-600 bg-clip-text text-transparent drop-shadow-2xl leading-tight">
-              منتجات هبه ناتشورالز العلاجية
+              منتجات هبه ناتشورالز العلاجيه
             </h1>
-
             {/* النص الجديد بخط كيرلي أنيق ومتجاوب */}
             <div className="mt-10 px-6 max-w-5xl mx-auto">
               <p className="text-2xl sm:text-3xl md:text-4xl leading-relaxed text-emerald-800 dark:text-emerald-200 font-bold"
@@ -120,7 +130,6 @@ const Products = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
-
                 <div className="p-6 sm:p-8 text-center">
                   <h3 className="text-2xl sm:text-3xl font-black text-emerald-800 dark:text-emerald-400 mb-5 leading-tight">
                     {product.name}
@@ -128,7 +137,6 @@ const Products = () => {
                   <p className="text-gray-700 dark:text-gray-300 text-base sm:text-lg leading-relaxed mb-8 whitespace-pre-line">
                     {product.description}
                   </p>
-
                   <button
                     onClick={() => handleWhatsAppClick(product.name)}
                     className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold text-lg sm:text-xl py-5 rounded-2xl flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
@@ -137,7 +145,6 @@ const Products = () => {
                     اطلبي عبر واتساب
                   </button>
                 </div>
-
                 <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-emerald-300/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
                 </div>
@@ -156,7 +163,7 @@ const Products = () => {
               جاهزه تبدئي رحلة شعر أحلامك؟
             </h2>
             <p className="text-2xl sm:text-3xl text-white/95 mb-12 max-w-5xl mx-auto font-medium px-6 leading-relaxed">
-              تواصلي الآن و دعينا نختار معا المنتج العلاجي المثالي لنوع شعرك 
+              تواصلي الآن ودعينا نختار معًا المنتج العلاجي المثالي لنوع شعرك
             </p>
             <a
               href={`https://wa.me/${whatsappNumber}?text=مرحبًا%20دكتورة%20هبة%20ناتشورالز%20❤️%0Aأريد%20استشارة%20مجانية%20كاملة%20لحالة%20شعري%20واختيار%20المنتجات%20المناسبة.%20شكرًا%20من%20قلبي!`}
