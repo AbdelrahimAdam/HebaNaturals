@@ -108,6 +108,98 @@ const fullPosts = {
 <p class="text-lg leading-relaxed font-semibold text-emerald-700 text-center text-2xl mt-10">جربي بنفسك… وهتعرفي ليه آلاف الستات بقوا يقولوا: "أخيرًا لقيت الحل"</p>
     `,
   },
+
+  /* ---------------------------------------------------
+      ⭐⭐ NEW BLOG POST – ID = 4 (Your SEO Article)
+  --------------------------------------------------- */
+  4: {
+    title: "لماذا تُعتبر منتجات هبة ناتشورالز الحل الأقوى لعلاج تساقط الشعر والثعلبة بشكل طبيعي وآمن؟",
+    date: "2025-11-25",
+    image: "/img/products/hebaBrand.jpeg",
+    content: `
+<div class="text-center mb-12">
+  <img src="/img/products/hebaBrand.jpeg" alt="منتجات هبة ناتشورالز - لعلاج تساقط الشعر والثعلبة" class="w-full max-w-2xl mx-auto rounded-3xl shadow-2xl border-8 border-white dark:border-gray-800" />
+</div>
+
+<p class="text-lg leading-relaxed mb-6">
+إذا كنتِ تبحثين عن علاج فعّال لتساقط الشعر، الثعلبة، القشرة، أو الفراغات بدون كيماويات أو آثار جانبية، فمنتجات "هبة ناتشورالز" هي خياركِ الأول. منتجاتنا تعتمد على الأعشاب الأيورفيدية والسودانية الأصيلة، وهي تركيبات طبيعية بالكامل أثبتت فعاليتها لدى أكثر من 12,000 عميلة في مصر والسودان والسعودية.
+</p>
+
+<p class="text-lg leading-relaxed mb-6">في هذا المقال، سنأخذكِ في جولة لمعرفة سرّ نجاح هذه المنتجات وكيف يمكن أن تغيّر تجربة شعركِ إلى الأفضل.</p>
+
+<hr class="my-10"/>
+
+<h2 class="text-2xl font-bold text-emerald-700 mb-6">⭐ ما سرّ فعالية منتجات هبة ناتشورالز؟</h2>
+
+<ul class="space-y-6 bg-emerald-50 dark:bg-emerald-950/40 p-8 rounded-3xl">
+  <li><strong>1. تركيبات طبيعية 100%</strong><br/>كل منتج مصنوع يدويًا من زيوت وأعشاب طبيعية مثل الحناء، السدر، الكركار، الأملا، البراهمي، والروزماري.</li>
+
+  <li><strong>2. نتائج مضمونة من الأسبوع الأول</strong>
+    <br/>أغلب العميلات يلاحظن:
+    <ul class="list-disc pr-8 mt-2 space-y-1">
+      <li>توقف التساقط</li>
+      <li>تقليل القشرة</li>
+      <li>ظهور شعر جديد في الفراغات</li>
+      <li>ترطيب ونعومة فورية</li>
+    </ul>
+  </li>
+
+  <li><strong>3. آمنة للأطفال والنساء والرجال</strong><br/>بدون كيماويات – بدون بارابين – بدون كبريتات – بدون أي مضافات ضارة.</li>
+
+  <li><strong>4. مخصصة للشعر الإفريقي والعربي</strong><br/>وهذا ما يجعل الفعالية أعلى من المنتجات التجارية.</li>
+</ul>
+
+<hr class="my-10"/>
+
+<h2 class="text-2xl font-bold text-emerald-700 mb-6">⭐ أفضل منتجاتنا لعلاج مشاكل الشعر</h2>
+
+<ul class="space-y-4 text-lg">
+  <li><strong>1) ماسك الحناء الطبيعي:</strong> يعالج التقصف ويزيد الكثافة ويقوّي البصيلات.</li>
+  <li><strong>2) ماسك السدر:</strong> لإنبات الشعر، تنظيف فروة الرأس، وتقليل التساقط.</li>
+  <li><strong>3) زبدة الكركار:</strong> ترطيب عميق – معالجة الأطراف – نعومة فورية.</li>
+  <li><strong>4) سيروم الإنبات:</strong> الأقوى لعلاج الثعلبة والفراغات.</li>
+  <li><strong>5) بخاخ Super Grow:</strong> لتسريع النمو من الجذور.</li>
+  <li><strong>6) المعالج الملكي + الأيورفيدي:</strong> لعلاج التلف وآثار الفرد والشيب المبكر.</li>
+  <li><strong>7) المجموعة الكاملة:</strong> أفضل خيار لنتائج أسرع.</li>
+</ul>
+
+<hr class="my-10"/>
+
+<h2 class="text-2xl font-bold text-emerald-700 mb-6">⭐ لماذا يثق بنا العملاء؟</h2>
+
+<ul class="space-y-4 text-lg bg-teal-50 dark:bg-teal-950/40 p-8 rounded-3xl">
+  <li>إشراف دكتورة مختصة (د. مواهب مهاجر)</li>
+  <li>أكثر من 12,000 تجربة ناجحة</li>
+  <li>نتائج مثبتة مع ضمان استرجاع</li>
+</ul>
+
+<hr class="my-10"/>
+
+<h2 class="text-2xl font-bold text-emerald-700 mb-6">⭐ كيف تختارين المنتج المناسب؟</h2>
+
+<p class="text-lg leading-relaxed mb-6">
+إذا لم تعرفي ما هو الأفضل لحالتك:
+</p>
+
+<ul class="list-disc pr-8 text-lg space-y-2">
+  <li>✔ تواصلي عبر واتساب</li>
+  <li>✔ سيتم تقييم شعركِ مجانًا</li>
+  <li>✔ اختيار العلاج المناسب لكِ</li>
+</ul>
+
+<hr class="my-10"/>
+
+<h2 class="text-2xl font-bold text-emerald-700 mb-6">⭐ الخلاصة</h2>
+
+<p class="text-lg leading-relaxed mb-6">
+منتجات "هبه ناتشورالز" ليست مجرد منتجات تجميل… إنها <strong>علاج طبيعي فعّال</strong> يعتمد على أعشاب قوية ونتائج مضمونة.
+</p>
+
+<p class="text-lg leading-relaxed font-semibold text-emerald-700">
+ابدئي رحلتكِ الآن واسترجعي جمال شعركِ بطريقة آمنة وطبيعية.
+</p>
+    `,
+  },
 };
 
 const BlogPost = () => {
@@ -142,7 +234,6 @@ const BlogPost = () => {
             animate={{ opacity: 1, y: 0 }}
             className="bg-white dark:bg-gray-900 rounded-3xl shadow-2xl overflow-hidden"
           >
-            {/* Header */}
             <div className="bg-gradient-to-r from-emerald-600 to-teal-600 p-10 text-white">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight">{post.title}</h1>
               <div className="flex flex-wrap items-center gap-6 mt-6 text-emerald-100">
@@ -151,12 +242,10 @@ const BlogPost = () => {
               </div>
             </div>
 
-            {/* Content مع الصور الفعلية */}
             <div className="p-8 sm:p-12 prose prose-lg max-w-none dark:prose-invert">
               <div dangerouslySetInnerHTML={{ __html: post.content }} />
             </div>
 
-            {/* CTA */}
             <div className="bg-emerald-50 dark:bg-emerald-950/50 p-12 text-center">
               <h3 className="text-2xl sm:text-3xl font-black text-emerald-800 dark:text-emerald-300 mb-8">
                 مستعده تبدئي رحلتك مع النتايج الحقيقيه؟

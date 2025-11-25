@@ -12,7 +12,7 @@ const blogPosts = [
     excerpt: "في زمن كثرت فيه المنتجات والوعود… نحن نقدم لكِ حلولًا حقيقيه مبنيه على العلم والطبيعه معًا.",
     date: "2025-11-20",
     author: "د. مواهب مهاجر",
-    image: "/img/products/hebaBrand.jpeg",    // صورة العلامة التجارية
+    image: "/img/products/hebaBrand.jpeg",
     category: "رساله من المؤسسه",
   },
   {
@@ -21,7 +21,7 @@ const blogPosts = [
     excerpt: "زيت علاجي ثوري يعيد الحياه للشعر من الجذور إلى الأطراف، يوقف التساقط، يُنبت الشعر الجديد، ويُصلح آثار الكيماويات.",
     date: "2025-11-18",
     author: "د. مواهب مهاجر",
-    image: "/img/products/oil.jpeg",          // صوره المعالج الأيورفيدي
+    image: "/img/products/oil.jpeg",
     category: "نجم المنتجات",
   },
   {
@@ -30,8 +30,20 @@ const blogPosts = [
     excerpt: "لا نُبيع أحلامًا… نُقدم نتائج. تعرفي على فلسفه هبه ناتشورالز في تقديم منتجات طبيعيه تُعالج السبب وليس العرض فقط.",
     date: "2025-11-15",
     author: "د. مواهب مهاجر",
-    image: "/img/products/karkar.jpeg",       // صورة الكركار الأصلي
+    image: "/img/products/karkar.jpeg",
     category: "رؤيه وفلسفه",
+  },
+
+  // ⭐ المقال الجديد المخصص للفهرسة SEO
+  {
+    id: 4,
+    title: "أفضل روتين علاجي طبيعي للشعر الأفريقي والمجعد – دليل هبة ناتشورالز العلمي",
+    excerpt:
+      "روتين علاجي فعّال مبني على منهج الأيورفيدا والطب الطبيعي لإعادة إنبات الشعر، علاج التقصف، ترطيب عميق، وإصلاح التلف.",
+    date: "2025-11-26",
+    author: "د. مواهب مهاجر",
+    image: "/img/products/hebaRoutine.jpeg",
+    category: "نصائح علمية",
   },
 ];
 
@@ -94,13 +106,13 @@ const Blog = () => {
 
                 {/* المحتوى */}
                 <div className="p-8">
-                  {/* التاريخ والكاتب */}
                   <div className="flex items-center gap-6 text-sm text-emerald-600 dark:text-emerald-400 mb-5 font-medium">
                     <span className="flex items-center gap-2">
                       <FaUser /> {post.author}
                     </span>
                     <span className="flex items-center gap-2">
-                      <FaClock /> {new Date(post.date).toLocaleDateString("ar-EG", {
+                      <FaClock />{" "}
+                      {new Date(post.date).toLocaleDateString("ar-EG", {
                         day: "numeric",
                         month: "long",
                         year: "numeric",
@@ -108,17 +120,14 @@ const Blog = () => {
                     </span>
                   </div>
 
-                  {/* العنوان */}
                   <h2 className="text-2xl sm:text-3xl font-black text-gray-800 dark:text-gray-100 mb-4 leading-tight line-clamp-2">
                     {post.title}
                   </h2>
 
-                  {/* الملخص */}
                   <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed text-base line-clamp-3">
                     {post.excerpt}
                   </p>
 
-                  {/* اقرئي المزيد */}
                   <Link
                     to={`/blog/${post.id}`}
                     className="inline-flex items-center gap-3 text-emerald-600 dark:text-emerald-400 font-bold text-lg hover:gap-5 transition-all duration-300"
@@ -127,16 +136,10 @@ const Blog = () => {
                     <FaLeaf className="text-xl group-hover:translate-x-2 transition-transform" />
                   </Link>
                 </div>
-
-                {/* تأثير اللمعان */}
-                <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-emerald-300/10 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
-                </div>
               </motion.article>
             ))}
           </div>
 
-          {/* رسالة سفلية */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -145,11 +148,8 @@ const Blog = () => {
             <h2 className="text-3xl sm:text-4xl font-black mb-6">
               تابعينا للمزيد من النصائح العلميه والتجارب الحقيقيه
             </h2>
-            <p className="text-xl opacity-90">
-              كل أسبوع مقال جديد 
-            </p>
+            <p className="text-xl opacity-90">كل أسبوع مقال جديد</p>
           </motion.div>
-
         </div>
       </main>
     </>
