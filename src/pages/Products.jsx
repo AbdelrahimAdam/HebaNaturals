@@ -13,48 +13,53 @@ const Products = () => {
       name: "ماسك الحنة الطبيعي",
       description: "يغذّي الشعر، يقلّل التقصف، ويزيد من كثافته.\nومعه يعمل على التطويل بشكل فعّال.\nلمسه طبيعيه لصحه وجمال شعرك.",
       image: "/img/products/henna.jpg",
+      price: 70
     },
     {
       id: 2,
       name: "ماسك السدر الطبيعي",
       description: "ينظّف فروة الرأس بعمق، يقلّل التساقط.\nويقوي الشعر من الجذور ويعمل على إنبات فروة الرأس.\nالسدر القديم للشعر صحي ونافع.",
       image: "/img/products/henna2.jpg",
+      price: 85
     },
     {
       id: 3,
       name: "زبدة الكركار الطبيعية",
       description: "تركيبة سودانية أصلية تُرطّب الشعر بعمق،\nتقوّي الأطراف، وتضمن نعومة وانسيابية\nيُلاحظ من أول استعمال.",
-      image: "/img/products/karkar.jpeg",
+      image: "/img/products/karkar.jpeg"
     },
     {
       id: 4,
       name: "سيروم الإنبات",
       description: "تركيبة فعالة تحفز نمو الشعر من الجذور، وتقوي البصيلات وتعالج الفراغات.\nعلاج فعال للثعلبة والصلع الغير وراثي.\nآمن للأطفال والنساء والرجال.",
-      image: "/img/products/ceroom.jpeg",
+      image: "/img/products/ceroom.jpeg"
     },
     {
       id: 5,
       name: "بخاخ Super Grow",
       description: "منقوع أعشاب فعال لتحفيز إنبات الشعر.\nيقوّي البصيلات ويقلّل التساقط.\nيحتوي على مواد ممتازة لترطيب\nبشكل ملحوظ مع الاستخدام المنتظم.",
       image: "/img/products/bakhakh.jpeg",
+      price: 55
     },
     {
       id: 6,
       name: "المعالج الملكي",
       description: "تركيبة مغذية بعمق تعالج التلف، تقوي الشعرة من الجذور حتى الأطراف،\nتعالج الشيب المبكر، وتمنح شعرك نعومة ولمعة ملكية.",
       image: "/img/products/king.jpeg",
+      price: 70
     },
     {
       id: 7,
       name: "المعالج الاورفيدي \"الكينج\"",
       description: "خلاصة الأعشاب الهندية الطبيعية، يعالج آثار الفرد والتلف الحراري ويمنحك شعر صحي ولامع من أول استعمال.",
       image: "/img/products/oil.jpeg",
+      price: 80
     },
     {
       id: 8,
       name: "مجموعة هبة ناتشورالز الكاملة",
       description: "كل المنتجات الطبيعيه في باقه واحده بإشراف د/ هبة مهاجر.\nنتائج حقيقيه، مكونات طبيعيه 100%، وثقة أكثر من 12,000 عميلة.",
-      image: "/img/products/hebaBrand.jpeg",
+      image: "/img/products/hebaBrand.jpeg"
     },
   ];
 
@@ -70,7 +75,7 @@ const Products = () => {
         <meta name="description" content="منتجات طبيعيه علاجيه للثعلبه، القشره، الفراغات، التساقط – بإشراف د/ مواهب مهاجر – نتائج فوريه ومضمونه" />
         <meta property="og:image" content="/img/products/hebaBrand.jpeg" />
 
-        {/* JSON-LD لكل المنتجات بدون السعر */}
+        {/* JSON-LD لكل المنتجات مع السعر */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -84,8 +89,16 @@ const Products = () => {
               "brand": {
                 "@type": "Brand",
                 "name": "هبه ناتشورالز"
-              }
-              // تم تخطي السعر عمدًا
+              },
+              ...(p.price ? { 
+                "offers": {
+                  "@type": "Offer",
+                  "price": p.price,
+                  "priceCurrency": "SAR",
+                  "availability": "https://schema.org/InStock",
+                  "url": "https://heba-naturals.vercel.app/products"
+                }
+              } : {})
             }))
           })}
         </script>
