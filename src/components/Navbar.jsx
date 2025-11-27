@@ -30,14 +30,15 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl shadow-xl border-b border-emerald-100 dark:border-emerald-900/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-        {/* Logo + Brand Name */}
-        <Link to="/" className="flex items-center gap-3 sm:gap-4">
+
+        {/* Logo + Brand Name – الحل النهائي بدون أي التصاق ولا \u200C ظاهرة */}
+        <Link to="/" className="flex items-center gap-2 sm:gap-3">
           <motion.div
             whileHover={{ scale: 1.12 }}
             whileTap={{ scale: 0.95 }}
             className="relative flex-shrink-0"
           >
-            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full overflow-hidden shadow-2xl ring-4 ring-emerald-300 dark:ring-emerald-600 ring-offset-2 ring-offset-white dark:ring-offset-gray-900">
+            <div className="w-11 h-11 xs:w-12 xs:h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full overflow-hidden shadow-2xl ring-4 ring-emerald-300 dark:ring-emerald-600 ring-offset-2 ring-offset-white dark:ring-offset-gray-900">
               <img
                 src="/img/logo.jpg"
                 alt="هبه ناتشورالز"
@@ -45,19 +46,15 @@ const Navbar = () => {
                 loading="eager"
               />
             </div>
-            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-transparent via-white/30 to-transparent shadow-inner pointer-events-none" />
           </motion.div>
 
-          <div className="hidden sm:block">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight leading-none">
+          <div className="block">
+            <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-black tracking-tight leading-none whitespace-nowrap">
               <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-                هبه
-              </span>
-              <span className="bg-gradient-to-r from-teal-500 to-green-600 bg-clip-text text-transparent ml-1">
-                ناتشورالز
+                هبه{/* هنا الحرف السحري اللي بيفصل الكلمتين */}‌ناتشورالز
               </span>
             </h1>
-            <p className="text-xs sm:text-sm text-emerald-700 dark:text-emerald-300 font-medium mt-1 opacity-90">
+            <p className="text-[10px] xs:text-xs sm:text-sm text-emerald-700 dark:text-emerald-300 font-medium mt-0.5 opacity-90 leading-none">
               منتجات طبيعية أصلية 100%
             </p>
           </div>
@@ -82,12 +79,15 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* فقط زر الثيم + زر الموبايل */}
-        <div className="flex items-center gap-4">
-          <ThemeToggle />
+        {/* أزرار التحكم */}
+        <div className="flex items-center gap-3">
+          <div className="scale-75 sm:scale-85 lg:scale-100 origin-right">
+            <ThemeToggle />
+          </div>
+
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden w-12 h-12 flex items-center justify-center rounded-full bg-emerald-100 dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300"
+            className="lg:hidden w-11 h-11 flex items-center justify-center rounded-full bg-emerald-100 dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300"
             aria-label="فتح القائمة"
           >
             {isOpen ? (
@@ -104,7 +104,6 @@ const Navbar = () => {
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -30 }}
           transition={{ duration: 0.4 }}
           className="lg:hidden bg-white dark:bg-gray-900 border-t-4 border-emerald-500 dark:border-emerald-700 shadow-2xl"
         >
