@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
 
-    <!-- الحل السحري: يفتح الموقع بحجمه الطبيعي من أي مكان (واتساب، إنستا، فيسبوك…) -->
+    <!-- الحل السحري: يفتح الموقع بحجمه الطبيعي من أي تطبيق (واتساب، فيسبوك، إنستا…) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <!-- العنوان الأقوى للسيو -->
@@ -40,14 +40,9 @@
     <link rel="icon" href="/img/logo.png" />
     <link rel="apple-touch-icon" href="/img/logo.png" />
 
-    <!-- Google AdSense Auto Ads (اختياري) -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1021404319231306" crossorigin="anonymous"></script>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "ca-pub-1021404319231306",
-        enable_page_level_ads: true
-      });
-    </script>
+    <!-- Google AdSense Auto Ads - بدون enable_page_level_ads لتجنب الخطأ -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1021404319231306" 
+            crossorigin="anonymous"></script>
 
     <!-- خط Cairo الفاخر -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -79,12 +74,13 @@
     }
     </script>
 
-    <!-- تحسين الأداء والخط + منع التكبير التلقائي نهائيًا -->
+    <!-- تحسين الأداء + منع التكبير التلقائي نهائيًا -->
     <style>
       :root { --primary: #0f766e; --emerald: #10b981; }
       
       body, html {
         margin: 0;
+        padding: 0;
         font-family: 'Cairo', 'Geeza Pro', 'Noto Sans Arabic', system-ui, sans-serif !important;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -93,13 +89,19 @@
         min-height: 100dvh;
         touch-action: manipulation;
         -webkit-text-size-adjust: 100%;
+        overflow-x: hidden;
       }
       
-      #root { min-height: 100dvh; }
-      #root:empty ~ * { display: none !important; }
+      #root { 
+        min-height: 100dvh; 
+      }
+      
+      #root:empty ~ * { 
+        display: none !important; 
+      }
 
-      /* يمنع التكبير من أي تطبيق خارجي (واتساب، إنستا، فيسبوك…) */
-      @viewport { width: device-width; zoom: 1; }
+      /* حماية إضافية ضد التكبير من التطبيقات الخارجية */
+      @viewport { width: device-width; zoom: 1.0; }
     </style>
   </head>
 

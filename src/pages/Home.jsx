@@ -6,11 +6,9 @@ import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { FaLeaf, FaHeart, FaShoppingBag, FaComments } from "react-icons/fa";
 import TestimonialsCarousel from "../components/TestimonialsCarousel";
-
 const Home = () => {
   const { t, i18n } = useTranslation();
   const isArabic = i18n.language === "ar";
-
   return (
     <>
       <Helmet>
@@ -22,7 +20,6 @@ const Home = () => {
         />
         <meta property="og:image" content="/img/products/hebaBrand.jpeg" />
       </Helmet>
-
       <main className="bg-gradient-to-br from-emerald-50 via-teal-50/70 to-cyan-100/80 dark:from-emerald-950 dark:via-teal-950/90 dark:to-cyan-900/80 min-h-screen">
         {/* HERO SECTION */}
         <section
@@ -35,7 +32,6 @@ const Home = () => {
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/95 via-black/85 to-teal-900/95" />
-
           {/* أوراق الشجر المتساقطة */}
           <div className="absolute inset-0 opacity-30 pointer-events-none">
             {[...Array(10)].map((_, i) => (
@@ -60,7 +56,6 @@ const Home = () => {
               </motion.div>
             ))}
           </div>
-
           <div className="container mx-auto px-5 text-center relative z-10">
             <motion.h1
               initial={{ y: -80, opacity: 0 }}
@@ -75,7 +70,6 @@ const Home = () => {
                 {isArabic ? "ناتشورالز" : "Naturals"}
               </span>
             </motion.h1>
-
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -84,7 +78,6 @@ const Home = () => {
             >
               منتجات علاجيه طبيعيه 100% بإشراف د/ مواهب مهاجر
             </motion.p>
-
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -105,7 +98,6 @@ const Home = () => {
               </Link>
             </motion.div>
           </div>
-
           {/* موجة زخرفية */}
           <div className="absolute bottom-0 w-full">
             <svg viewBox="0 0 1440 150" className="w-full h-24 md:h-32">
@@ -117,7 +109,6 @@ const Home = () => {
             </svg>
           </div>
         </section>
-
         {/* QUICK NAVIGATION */}
         <section className="py-20 bg-gradient-to-br from-emerald-100/60 via-teal-50 to-cyan-100/60 dark:from-emerald-950/60 dark:via-teal-950 dark:to-cyan-950/60">
           <div className="container mx-auto px-5">
@@ -128,7 +119,6 @@ const Home = () => {
             >
               اكتشفي مجموعتنا الفريده
             </motion.h2>
-
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               {[
                 { path: "/about", label: "من نحن", Icon: FaLeaf, gradient: "from-emerald-500 to-teal-600" },
@@ -156,14 +146,11 @@ const Home = () => {
             </div>
           </div>
         </section>
-
         {/* Testimonials */}
         <TestimonialsCarousel />
-
         {/* تم حذف زر الواتساب العائم نهائيًا */}
       </main>
     </>
   );
 };
-
 export default Home;
