@@ -2,11 +2,13 @@
 <html lang="ar" dir="rtl" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=5.0" />
 
-    <!-- العنوان الأقوى للسيو والظهور الأول -->
+    <!-- الحل السحري: يفتح الموقع بحجمه الطبيعي من أي مكان (واتساب، إنستا، فيسبوك…) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- العنوان الأقوى للسيو -->
     <title>هبه ناتشورالز | علاج الثعلبة وإنبات الشعر طبيعيًا 100% – نتائج من أول أسبوع</title>
-
+    
     <meta name="google-site-verification" content="5EZpaRPY-F02w-IGuucQZXRTo-2KK0fhG0RZ-jNUtPY" />
     <meta name="description" content="هبه ناتشورالز – منتجات طبيعيه 100% لعلاج الثعلبه، إنبات الشعر، تكثيفه وملء الفراغات مع نتائج مثبته خلال أسابيع. كركار سوداني، سيروم الإنبات، معالج أيورفيدي قوي." />
     <meta name="keywords" content="هبه ناتشورالز, علاج الثعلبة, إنبات الشعر, كركار سوداني, سيروم انبات, تكثيف الشعر, شعر افريقي, علاج تساقط الشعر, Heba Naturals, دكتورة هبة مهاجر" />
@@ -38,9 +40,8 @@
     <link rel="icon" href="/img/logo.png" />
     <link rel="apple-touch-icon" href="/img/logo.png" />
 
-    <!-- Google AdSense Auto Ads -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1021404319231306"
-     crossorigin="anonymous"></script>
+    <!-- Google AdSense Auto Ads (اختياري) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1021404319231306" crossorigin="anonymous"></script>
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({
         google_ad_client: "ca-pub-1021404319231306",
@@ -48,7 +49,7 @@
       });
     </script>
 
-    <!-- Fonts -->
+    <!-- خط Cairo الفاخر -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -78,22 +79,32 @@
     }
     </script>
 
-    <!-- تحسين الأداء والخط -->
+    <!-- تحسين الأداء والخط + منع التكبير التلقائي نهائيًا -->
     <style>
-      :root { --primary:#0f766e; --emerald:#10b981; }
-      body {
-        margin:0;font-family:'Cairo','Geeza Pro','Noto Sans Arabic',system-ui,sans-serif!important;
-        -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
-        background:linear-gradient(to bottom,#ecfdf5,#ffffff);min-height:100dvh;
+      :root { --primary: #0f766e; --emerald: #10b981; }
+      
+      body, html {
+        margin: 0;
+        font-family: 'Cairo', 'Geeza Pro', 'Noto Sans Arabic', system-ui, sans-serif !important;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+        background: linear-gradient(to bottom, #ecfdf5, #ffffff);
+        min-height: 100dvh;
+        touch-action: manipulation;
+        -webkit-text-size-adjust: 100%;
       }
-      #root{min-height:100dvh;}
-      #root:empty ~ * {display:none!important;}
+      
+      #root { min-height: 100dvh; }
+      #root:empty ~ * { display: none !important; }
+
+      /* يمنع التكبير من أي تطبيق خارجي (واتساب، إنستا، فيسبوك…) */
+      @viewport { width: device-width; zoom: 1; }
     </style>
   </head>
 
   <body class="bg-gradient-to-b from-emerald-50 to-white dark:from-emerald-950 dark:to-black text-gray-800 dark:text-gray-100 antialiased transition-colors duration-700">
     <div id="root"></div>
-
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
