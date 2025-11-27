@@ -91,31 +91,32 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Controls: Theme + Language + Mobile Menu */}
-        <div className="flex items-center gap-3 sm:gap-4">
-          {/* زر الثيم الفاخر المُصحح 100% – القمر ما بيطلعش بره أبدًا */}
-          <div className="relative">
+        {/* Controls: Theme + Language + Mobile Menu – الأزرار الآن متساوية وصغيرة وأنيقة */}
+        <div className="flex items-center gap-3">
+          {/* زر الثيم (القمر والشمس) */}
+          <div className="flex justify-center items-center">
             <ThemeToggle />
           </div>
 
-          {/* زر تبديل اللغة */}
+          {/* زر اللغة – صغير، دائري، متسق تمامًا */}
           <button
             onClick={toggleLanguage}
-            className="px-4 py-2.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold rounded-full text-sm shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold text-sm shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            aria-label="تبديل اللغة"
           >
-            {isArabic ? "EN" : "عربي"}
+            {isArabic ? "EN" : "ع"}
           </button>
 
           {/* زر القائمة في الموبايل */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-3 rounded-xl bg-emerald-100 dark:bg-gray-800 shadow-md"
+            className="lg:hidden w-12 h-12 flex items-center justify-center rounded-full bg-emerald-100 dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300"
             aria-label="فتح القائمة"
           >
             {isOpen ? (
-              <AiOutlineClose size={26} className="text-emerald-700 dark:text-emerald-400" />
+              <AiOutlineClose size={22} className="text-emerald-700 dark:text-emerald-400" />
             ) : (
-              <AiOutlineMenu size={26} className="text-emerald-700 dark:text-emerald-400" />
+              <AiOutlineMenu size={22} className="text-emerald-700 dark:text-emerald-400" />
             )}
           </button>
         </div>
@@ -130,7 +131,7 @@ const Navbar = () => {
           transition={{ duration: 0.4 }}
           className="lg:hidden bg-white dark:bg-gray-900 border-t-4 border-emerald-500 dark:border-emerald-700 shadow-2xl"
         >
-          <div className="py-6 px-6 space-y-2">
+          <div className="py-6 px-6 space-y-3">
             {navItems.map((item) => (
               <Link
                 key={item.path}

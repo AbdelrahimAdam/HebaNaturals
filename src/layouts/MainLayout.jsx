@@ -9,66 +9,73 @@ const MainLayout = () => {
   const { i18n } = useTranslation();
   const isArabic = i18n.language === "ar";
 
-  // تفعيل التمرير السلس الناعم جدًا عند تحميل الصفحة أو تغيير اللغة
+  // تفعيل التمرير السلس + ضبط الخط العربي الحديث بدقة عالية
   useEffect(() => {
-    // تفعيل smooth scroll على مستوى HTML
+    // تفعيل smooth scroll
     document.documentElement.style.scrollBehavior = "smooth";
 
-    // إضافة تمرير سلس مخصص أكثر نعومة وفخامة باستخدام CSS easing مخصص
+    // إضافة CSS مخصص للخط + التم10رير + تحسين الـ rendering
     const style = document.createElement("style");
     style.textContent = `
-      html {
+      /* أجمل خط عربي عصري في 2025 – Cairo */
+      body, html {
+        font-family: 'Cairo', 'Geeza Pro', 'Noto Sans Arabic', system-ui, -apple-system, sans-serif !important;
+        font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        letter-spacing: -0.02em;
         scroll-behavior: smooth;
+        scroll-padding-top: 100px;
       }
-      
-      /* منحنى حركة فاخر جدًا (أنعم من الـ ease-in-out العادي) */
-      @keyframes smoothScroll {
-        0% {
-          transform: translateY(0);
-        }
-        100% {
-          transform: translateY(0);
+
+      /* تحسين وضوح النصوص العربية */
+      h1, h2, h3, h4, h5, h6, .font-bold, .font-black {
+        font-weight: 800;
+        letter-spacing: -0.04em;
+      }
+
+      p, span, div, li, a {
+        line-height: 1.85;
+        letter-spacing: -0.01em;
+      }
+
+      /* تحسين الخط على الشاشات عالية الكثافة (مثل آيفون ريتنا) */
+      @supports (-webkit-touch-callout: none) {
+        body {
+          -webkit-text-stroke: 0.5px transparent;
         }
       }
 
-      /* تطبيق easing مخصص على كل التمرير */
+      /* تمرير سلس فائق النعومة */
       *, *::before, *::after {
         scroll-behavior: smooth !important;
       }
 
-      /* منحنى نعومة فائق (custom cubic-bezier) – أجمل وأكثر سلاسة من ease-in-out */
-      html {
-        scroll-padding-top: 90px; /* لتجنب تداخل المحتوى مع الـ Navbar الثابت */
-      }
-
-      /* للأجهزة التي لا تدعم scroll-behavior (مثل بعض الموبايلات القديمة) */
-      @media (prefers-reduced-motion: no-preference) {
-        html {
-          scroll-behavior: smooth;
+      /* دعم prefers-reduced-motion */
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
         }
       }
     `;
+
     document.head.appendChild(style);
 
-    // تنظيف عند إلغاء تحميل المكوّن
     return () => {
       document.documentElement.style.scrollBehavior = "";
-      if (style && style.parentNode) {
-        style.parentNode.removeChild(style);
-      }
+      if (style.parentNode) style.parentNode.removeChild(style);
     };
   }, []);
 
-  // تمرير سلس عند التنقل بين الصفحات (مهم جدًا عند استخدام React Router)
+  // تمرير سلس للأعلى عند تغيير الصفحة
   useEffect(() => {
     const handleRouteChange = () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     };
-
-    // نستمع لتغيير المسار (اختياري إذا كنتِ تستخدمين useLocation)
     window.addEventListener("popstate", handleRouteChange);
     return () => window.removeEventListener("popstate", handleRouteChange);
   }, []);
@@ -77,17 +84,24 @@ const MainLayout = () => {
     <div
       dir={isArabic ? "rtl" : "ltr"}
       lang={isArabic ? "ar" : "en"}
-      className={`min-h-screen flex flex-col font-sans antialiased bg-gradient-to-b from-emerald-50/30 to-white dark:from-gray-900 dark:to-black transition-all duration-1000`}
+      className={`
+        min-h-screen flex flex-col
+        bg-gradient-to-b from-emerald-50/40 via-white to-teal-50/30
+        dark:from-emerald-950 dark:via-gray-900 dark:to-teal-950
+        text-gray-800 dark:text-gray-100
+        antialiased
+        transition-all duration-1000
+      `}
+      style={{
+        fontFamily: "'Cairo', 'Geeza Pro', 'Noto Sans Arabic', system-ui, sans-serif",
+      }}
     >
-      {/* Navbar ثابت في الأعلى */}
       <Navbar />
 
-      {/* المحتوى الرئيسي مع حشوة لتجنب التداخل مع الـ Navbar */}
-      <main className="flex-grow pt-20 pb-10">
+      <main className="flex-grow pt-20 pb-16">
         <Outlet />
       </main>
 
-      {/* Footer + أيقونة واتساب عائمة */}
       <Footer />
     </div>
   );

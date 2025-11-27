@@ -61,6 +61,14 @@ const Products = () => {
       description: "كل المنتجات الطبيعيه في باقه واحده بإشراف د/ هبة مهاجر.\nنتائج حقيقيه، مكونات طبيعيه 100%، وثقة أكثر من 12,000 عميلة.",
       image: "/img/products/hebaBrand.jpeg"
     },
+    // المنتج الجديد تمت إضافته هنا
+    {
+      id: 9,
+      name: "شامبو الأعشاب الطبيعية الخالي من السلفات الضار",
+      description: "شامبو مستخلص من افضل الخلاصات الطبيعيه, مصمم لحماية شعرك من الضرر و الجفاف. غني بالقهوه و المكونات المرطبه,مهدئ للفروه يمنح شعرك تنظيفا عميقا و رغويا مع الحفاظ على رطوبته الطبيعيه. مناسب للاطفال من سنتين و التالف و للنساء و الرجال و للشعر المصبوغ و المعالج بالبروتين, ليتركه صحيا,ناعما ولامعا.",
+      image: "/img/products/gulabfrish.jpeg",
+      price: 75
+    },
   ];
 
   const handleWhatsAppClick = (productName) => {
@@ -72,9 +80,8 @@ const Products = () => {
     <>
       <Helmet>
         <title>منتجات هبه ناتشورالز | علاجات طبيعيه للشعر الأفريقي والعربي</title>
-        <meta name="description" content="منتجات طبيعيه علاجيه للثعلبه، القشره، الفراغات، التساقط – بإشراف د/ مواهب مهاجر – نتائج فوريه ومضمونه" />
+        <meta name="description" content="منتجات طبيعيه علاجيه للثعلبه، القشره، الفراغات، التساقط – بإشراف د/ هبة مهاجر – نتائج فوريه ومضمونه" />
         <meta property="og:image" content="/img/products/hebaBrand.jpeg" />
-
         {/* JSON-LD لكل المنتجات مع السعر */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -90,7 +97,7 @@ const Products = () => {
                 "@type": "Brand",
                 "name": "هبه ناتشورالز"
               },
-              ...(p.price ? { 
+              ...(p.price ? {
                 "offers": {
                   "@type": "Offer",
                   "price": p.price,

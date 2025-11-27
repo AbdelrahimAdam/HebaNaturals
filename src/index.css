@@ -1,9 +1,34 @@
-/* src/index.css */
+/* ==========================
+   Import Arabic font FIRST
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;600;700&display=swap');
+
+/* ==========================
+   Tailwind Core
+========================== */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Global styles */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* ==========================
+   Global Font + Anti-Aliasing Fix
+========================== */
+html, body {
+  font-family: 'Tajawal', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;               /* 🔥 Prevent Arabic letter clipping */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
+
+/* Apply safer line-height to common UI text */
+h1, h2, h3, h4, h5, h6,
+button, a, p, span {
+  line-height: 1.5;
+}
+
+/* Strong bold headings but safe for Arabic stroke curves */
+h1, h2, h3 { font-weight: 600 !important; }
+
+* { text-rendering: optimizeLegibility; }
