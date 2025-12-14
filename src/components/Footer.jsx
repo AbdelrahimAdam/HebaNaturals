@@ -95,7 +95,7 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* أيقونات السوشيال ميديا – متجاوبة وجميلة */}
+        {/* أيقونات السوشيال ميديا */}
         <div className="flex justify-center items-center gap-6 sm:gap-8 md:gap-10 mb-16">
           {socialLinks.map((social, i) => (
             <motion.a
@@ -128,10 +128,19 @@ const Footer = () => {
             نصنع الجمال من القلب لأجل شعرك
             <FaHeart className="text-rose-400 animate-ping" />
           </p>
-          <p className="text-emerald-300 text-sm sm:text-base">
+
+          <p className="text-emerald-300 text-sm sm:text-base mb-2">
             © {year} <span className="font-black text-emerald-100 text-lg">Heba Naturals</span> • كل الحقوق محفوظه
             <br className="sm:hidden" /> • بإشراف د/ مواهب مهاجر
           </p>
+
+          {/* ✅ رابط سياسة الخصوصية – إضافة فقط */}
+          <Link
+            to="/privacy-policy"
+            className="text-emerald-300 underline hover:text-emerald-100 text-sm"
+          >
+            سياسة الخصوصية
+          </Link>
         </div>
       </div>
 
